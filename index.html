@@ -21,7 +21,14 @@ h1,h1 em,.closet-title h2,.modal-card h2{font-family:'Segoe UI',Tahoma,Arial,san
 /* Fixed icon boxes avoid font-baseline drift on compact stage controls. */
 .scene-button{display:flex;align-items:center;justify-content:center;padding:0;line-height:1;flex:0 0 auto}.scene-button svg{display:block;width:18px;height:18px;flex-shrink:0;overflow:visible}.scene-button:nth-child(3){color:#cc7e9e}.icon-btn{padding:0;line-height:1}@media(max-width:420px){.scene-button svg{width:16px;height:16px}}
 
-.love-gift-replay{display:grid;place-items:center;background:#f9e8ee;border:1px solid #eed1dc;border-radius:8px;width:26px;height:26px;padding:0;font-size:15px;line-height:1}.love-surprise-card{max-width:590px;text-align:center;background:radial-gradient(ellipse at 50% 0,#fff4e9,#fffaf7 60%)}.love-surprise-card h2{font-size:24px;color:#a35f7e;line-height:1.4;margin:12px 8px}.love-surprise-copy{font-size:14px;line-height:1.9;color:#956f82;max-width:460px;margin:16px auto}.love-surprise-whisper{font-size:12px;line-height:1.8;color:#b18d9d;margin:12px auto 22px;max-width:435px}.secret-gift-art{display:flex;align-items:center;justify-content:center;gap:15px;min-height:150px;color:#d6b47c}.secret-gift-art strong{font-size:88px;animation:loveGiftFloat 2.6s ease-in-out infinite}.secret-gift-art span:nth-child(even){font-size:32px;color:#d394b0}.love-reward-tag{font-size:9px;letter-spacing:1.4px;font-weight:800;color:#bd92a3;margin:0 0 9px}.love-surprise-card h3{font-size:18px;color:#b17391;margin:0 8px 12px}.love-gift-saved{display:block;font-size:9px;color:#bda2ae;margin-top:18px}#loveCrownPreview{width:210px;max-width:100%;height:150px;margin:4px auto 0;display:block}.love-surprise-card .eyebrow{margin-top:12px}.love-surprise-card .modal-actions{margin-top:18px}@keyframes loveGiftFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-8px) rotate(4deg)}}@media(max-width:420px){.love-surprise-card h2{font-size:21px}.love-surprise-copy{font-size:12px}.secret-gift-art{gap:12px}.secret-gift-art strong{font-size:72px}}
+.love-gift-replay{display:grid;place-items:center;background:#f9e8ee;border:1px solid #eed1dc;border-radius:8px;width:26px;height:26px;padding:0;font-size:15px;line-height:1}.love-surprise-card{max-width:590px;text-align:center;background:radial-gradient(ellipse at 50% 0,#fff4e9,#fffaf7 60%)}.love-surprise-card h2{font-size:24px;color:#a35f7e;line-height:1.4;margin:12px 8px}.love-surprise-copy{font-size:14px;line-height:1.9;color:#956f82;max-width:460px;margin:16px auto}.love-surprise-whisper{font-size:12px;line-height:1.8;color:#b18d9d;margin:12px auto 22px;max-width:435px}.secret-gift-art{display:flex;align-items:center;justify-content:center;gap:15px;min-height:150px;color:#d6b47c}.secret-gift-art strong{font-size:88px;animation:loveGiftFloat 2.6s ease-in-out infinite}.secret-gift-art span:nth-child(even){font-size:32px;color:#d394b0}.love-reward-tag{font-size:9px;letter-spacing:1.4px;font-weight:800;color:#bd92a3;margin:0 0 9px}.love-surprise-card h3{font-size:18px;color:#b17391;margin:0 8px 12px}.love-gift-saved{display:block;font-size:9px;color:#bda2ae;margin-top:18px}#loveCrownPreview{width:210px;max-width:100%;height:150px;margin:4px auto 0;display:block}.love-surprise-card .eyebrow{margin-top:12px}
+.love-heart-stage{display:grid;place-items:center;width:min(100%,400px);height:220px;margin:12px auto 4px;border-radius:22px;overflow:hidden;background:radial-gradient(ellipse at 50% 55%,#2b1233 0%,#140b24 58%,#0a0716 100%);box-shadow:inset 0 0 40px #0008,0 10px 30px #a35f7e33}
+.love-heart-stage>*{grid-area:1/1}
+#loveHeartCanvas{width:100%;height:100%;display:block}
+#loveHeartGift{font-size:56px;line-height:1;animation:loveGiftFloat 2.6s ease-in-out infinite;filter:drop-shadow(0 0 14px #ff5c93aa);pointer-events:none}
+@media(max-width:420px){.love-heart-stage{height:190px}#loveHeartGift{font-size:46px}}
+@media(prefers-reduced-motion:reduce){#loveHeartGift{animation:none}}
+.love-surprise-card .modal-actions{margin-top:18px}@keyframes loveGiftFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-8px) rotate(4deg)}}@media(max-width:420px){.love-surprise-card h2{font-size:21px}.love-surprise-copy{font-size:12px}.secret-gift-art{gap:12px}.secret-gift-art strong{font-size:72px}}
 </style></head><body><div id="cameraFlash"></div>
 <header class="topbar">
   <a class="brand" href="#" aria-label="Tiệm của Non Non"><span class="brand-icon">🐹</span><span><strong>Tiệm của Non Non<span class="brand-dot">.</span></strong><small>MỘT CHÚT XINH, MỘT TRỜI YÊU THƯƠNG</small></span></a>
@@ -73,8 +80,9 @@ Yêu và thương Non Non thật nhiều! 💖🐹🐱</p><button id="btnToggleE
   <button id="btnCloseLoveGift" class="close-modal" aria-label="Đóng quà bí mật">×</button>
   <p class="eyebrow">A LITTLE SECRET, JUST FOR YOU</p>
   <h2 id="loveGiftHeading">100% tình cảm, một trời thương em ♡</h2>
+  <div class="love-heart-stage" aria-hidden="true"><canvas id="loveHeartCanvas"></canvas><span id="loveHeartGift">🎁</span></div>
   <div id="loveGiftIntro">
-   <div class="secret-gift-art" aria-hidden="true"><span>✦</span><span>♡</span><strong>🎁</strong><span>♡</span><span>✦</span></div>
+   
    <p class="love-surprise-copy">Từng lần nựng má, từng bộ đồ em chọn, từng khoảnh khắc bên nhau… đã gom thành một hộp yêu thương.</p>
    <p class="love-surprise-whisper">Mèo Ú giấu một món quà nhỏ ở đây. Em mở thử nhé?</p>
    <button id="btnUnwrapLoveGift" class="primary-btn">Mở hộp quà bí mật ♡</button>
@@ -2792,6 +2800,7 @@ function showLoveSurprise(){
  document.getElementById('loveGiftIntro').classList.toggle('hidden',unlocked);
  document.getElementById('loveGiftReveal').classList.toggle('hidden',!unlocked);
  const modal=document.getElementById('loveSurpriseModal');modal.classList.remove('hidden');modal.classList.add('flex');
+ document.getElementById('loveHeartGift').classList.toggle('hidden',unlocked);if(window.loveHeart)loveHeart.start();
  if(unlocked){
   const preview=document.getElementById('loveCrownPreview'),c=preview.getContext('2d');c.clearRect(0,0,preview.width,preview.height);c.save();c.translate(preview.width/2,165);drawHamsterHeadwear2D(c,loveGiftItem.id,boutiqueOutline,0);c.restore();audio.playSparkle();
  }
@@ -2819,6 +2828,7 @@ function revealLoveGift(){
  state.equipped.headwear=loveGiftItem.id;
  persistBoutique();renderWardrobeGrid();
  document.getElementById('loveGiftIntro').classList.add('hidden');document.getElementById('loveGiftReveal').classList.remove('hidden');
+ document.getElementById('loveHeartGift').classList.add('hidden');if(window.loveHeart)loveHeart.burst();
  const preview=document.getElementById('loveCrownPreview'),c=preview.getContext('2d');c.clearRect(0,0,preview.width,preview.height);c.save();c.translate(preview.width/2,165);drawHamsterHeadwear2D(c,loveGiftItem.id,boutiqueOutline,0);c.restore();
  document.getElementById('btnWearGiftPhoto').focus();
  spawnBurstHearts(290,220,38);audio.playShutter();triggerPose2D();updateCatComment(loveGiftItem.comment);
@@ -2843,4 +2853,65 @@ window.addEventListener('load',()=>{
  const observer=new MutationObserver(()=>{if(loveGiftPending)setTimeout(flushLoveSurprise,0);});
  for(const id of ['photoModal','dateStoryModal'])observer.observe(document.getElementById(id),{attributes:true,attributeFilter:['class']});
 });
+
+/* Glowing particle heart for the secret-gift window */
+(function(){
+ const cv=document.getElementById('loveHeartCanvas'),modal=document.getElementById('loveSurpriseModal');
+ if(!cv||!modal)return;
+ const ctx=cv.getContext('2d'),reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const N=1800,YC=-2.5; // YC = vertical centre of the heart curve
+ let W=0,H=0,sc=1,raf=0,t0=0,burstAt=-99;const parts=[];
+ const rnd=(a,b)=>a+Math.random()*(b-a),gauss=()=>(Math.random()+Math.random()+Math.random()-1.5)/1.5;
+ function build(){
+  for(let i=0;i<N;i++){
+   const t=Math.random()*Math.PI*2,r=Math.random();
+   const hx=16*Math.pow(Math.sin(t),3),hy=13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t);
+   let k,c,z,a;
+   if(r<.6){k=.9+gauss()*.045;c='hsl('+rnd(345,358)+',100%,'+rnd(78,92)+'%)';z=rnd(1.1,1.9);a=rnd(.7,1);}      // bright rim
+   else if(r<.82){k=1+Math.abs(gauss())*.17;c='hsl('+rnd(348,360)+',90%,'+rnd(44,58)+'%)';z=rnd(.9,1.6);a=rnd(.35,.7);} // red halo
+   else{k=Math.sqrt(Math.random())*.84;c='hsl('+rnd(335,352)+',85%,'+rnd(55,68)+'%)';z=rnd(.8,1.4);a=rnd(.22,.5);}   // sparse core
+   const tx=hx*k,ty=-(hy-YC)*k,len=Math.hypot(tx,ty)||1,ang=Math.random()*Math.PI*2,far=rnd(22,60),amp=rnd(4,15);
+   parts.push({tx,ty,c,z,a,o:Math.random()*6.28,d:Math.random()*.7,
+    sx:tx+Math.cos(ang)*far,sy:ty+Math.sin(ang)*far,
+    bx:(tx/len+rnd(-.45,.45))*amp,by:(ty/len+rnd(-.45,.45))*amp});
+  }
+ }
+ function size(){
+  const dpr=Math.min(window.devicePixelRatio||1,2);
+  W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  sc=Math.min(W/40,H/36);
+ }
+ function draw(t){
+  ctx.globalCompositeOperation='source-over';ctx.clearRect(0,0,W,H);
+  const ph=(t%1.3)/1.3,beat=reduce?0:Math.exp(-Math.pow((ph-.07)*13,2))+.6*Math.exp(-Math.pow((ph-.3)*13,2));
+  const s=sc*(1+.075*beat),cx=W/2,cy=H/2,bt=t-burstAt;
+  const g=ctx.createRadialGradient(cx,cy,0,cx,cy,sc*21);
+  g.addColorStop(0,'rgba(255,70,120,'+(.17+.13*beat)+')');g.addColorStop(1,'rgba(255,70,120,0)');
+  ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+  ctx.globalCompositeOperation='lighter';
+  for(const p of parts){
+   let e=reduce?1:Math.min(1,Math.max(0,(t-p.d)/1.5));e=1-Math.pow(1-e,3);
+   let x=p.tx*e+p.sx*(1-e),y=p.ty*e+p.sy*(1-e);
+   if(bt>0&&bt<1.6){const f=Math.sin(bt/1.6*Math.PI);x+=p.bx*f;y+=p.by*f;}
+   if(!reduce){x+=Math.sin(t*1.7+p.o)*.22;y+=Math.cos(t*1.3+p.o*1.7)*.22;}
+   ctx.globalAlpha=Math.min(1,p.a*(reduce?1:.7+.3*Math.sin(t*3.1+p.o*4))*(.85+.15*beat)*(.25+.75*e));
+   ctx.fillStyle=p.c;ctx.fillRect(cx+x*s-p.z/2,cy+y*s-p.z/2,p.z,p.z);
+  }
+  ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+ }
+ function frame(now){
+  if(modal.classList.contains('hidden')){raf=0;return;}
+  if(cv.clientWidth!==W||cv.clientHeight!==H)size();
+  draw((now-t0)/1000);raf=requestAnimationFrame(frame);
+ }
+ window.loveHeart={
+  start(){
+   if(!parts.length)build();
+   size();burstAt=-99;t0=performance.now();
+   if(reduce){draw(99);return;}
+   if(!raf)raf=requestAnimationFrame(frame);
+  },
+  burst(){if(!reduce)burstAt=(performance.now()-t0)/1000;}
+ };
+})();
 </script></body></html>
