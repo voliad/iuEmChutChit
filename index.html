@@ -61,7 +61,7 @@ h1,h1 em,.closet-title h2,.modal-card h2{font-family:'Segoe UI',Tahoma,Arial,san
  <div class="modal-card date-modal"><button id="btnCloseDateModal" class="close-modal" aria-label="Đóng buổi hẹn">×</button><p class="eyebrow">OUR LITTLE DATE</p><h2 id="dateHeading">Một buổi hẹn của hai đứa 💕</h2><p id="dateStepIndicator"></p><h3 id="dateSceneTitle"></h3><p id="dateStoryText"></p><div id="dateChoicesContainer"></div></div>
 </div>
 <div id="photoModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="photoHeading">
- <div class="modal-card"><button id="btnCloseModal" class="close-modal" aria-label="Đóng thiệp">×</button><p class="eyebrow">A MOMENT TO KEEP</p><h2 id="photoHeading">Giữ lại một chút đáng yêu 💌</h2><p id="awardTitleText"></p><div class="photo-content"><div class="polaroid"><img id="polaroidImg" alt="Ảnh kỷ niệm của Non Non và Mèo Ú"><strong>Non Non & Mèo Ú ♡</strong><p id="polaroidCaption"></p></div><div class="letter"><small>GỬI NON NON CỦA ANH,</small><p id="loveLetterBody">Gửi Non Non - cô bé Hamster xinh đẹp nhất trong lòng anh! 🌸
+ <div class="modal-card"><button id="btnCloseModal" class="close-modal" aria-label="Đóng thiệp">×</button><p class="eyebrow">A MOMENT TO KEEP</p><h2 id="photoHeading">Giữ lại một chút đáng yêu 💌</h2><p id="awardTitleText"></p><div class="photo-content"><div class="polaroid"><img id="polaroidImg" alt="Ảnh kỷ niệm của Non Non và Mèo Ú"><strong>Non Non & Mèo Ú ♡</strong><p id="polaroidCaption"></p></div><div class="letter"><small>GỬI NON NON CỦA ANH,</small><p id="loveLetterBody">Gửi Non Non, cô bé Hamster xinh đẹp nhất trong lòng anh! 🌸
 
 Chúc em một ngày Phụ nữ Việt Nam 20/10 ngập tràn niềm vui, tiếng cười và hạnh phúc. Dù diện váy công chúa, áo dài dịu dàng hay áo các dì các mẹ thì trong mắt chú Mèo Ú này, Non Non lúc nào cũng đạt 1000/100 điểm đáng yêu!
 
@@ -83,7 +83,7 @@ Yêu và thương Non Non thật nhiều! 💖🐹🐱</p><button id="btnToggleE
    <canvas id="loveCrownPreview" width="280" height="200" role="img" aria-label="Vương miện trái tim dành riêng cho Non Non"></canvas>
    <p class="love-reward-tag">ĐÃ MỞ KHÓA · PHỤ KIỆN ĐẶC BIỆT</p>
    <h3>Vương miện trái tim của Mèo Ú</h3>
-   <p class="love-surprise-copy">“Em không cần lúc nào cũng rạng rỡ, cũng không cần phải hoàn hảo. Cứ là Non Non thôi, anh vẫn chọn em — hôm nay và trong những ngày bình thường nhất.”</p>
+   <p class="love-surprise-copy">“Em không cần lúc nào cũng rạng rỡ, cũng không cần phải hoàn hảo. Cứ là Non cute thui, anh vẫn iu em nay và mai saut.”</p>
    <p class="love-surprise-whisper">Cảm ơn em đã bước vào thế giới bé xíu của anh. Chúc công chúa của anh một ngày 20/10 thật hạnh phúc! 💗</p>
    <div class="modal-actions"><button id="btnWearGiftPhoto" class="primary-btn">Đội vương miện & chụp ảnh 📸</button><button id="btnContinueLoveGift" class="soft-btn">Chơi tiếp ♡</button></div>
    <small class="love-gift-saved">Vương miện đã được thêm vào mục Cài tóc và lưu trên trình duyệt này.</small>
@@ -430,7 +430,7 @@ Yêu và thương Non Non thật nhiều! 💖🐹🐱</p><button id="btnToggleE
                 text: 'Sau khi dạo chơi và chụp thật nhiều bức hình xinh xắn, Mèo Ú nắm tay Non Non và hỏi nhỏ: "Bây giờ cô chủ nhỏ Non Non muốn Mèo Ú làm gì để chiều chuộng em nhất nào?"',
                 choices: [
                     { label: '🧋 Mời đại tiệc Trà Sữa Full Topping & Bánh Kem Dâu', cat: 'cat_boba_master', aura: 'aura_hearts', reply: 'Có ngay! Mèo Ú đã chuẩn bị trà sữa ít đá nhiều trân châu và bánh kem dâu ngọt lịm cho Non Non!' },
-                    { label: '🎸 Đàn một bản tình ca 20/10 thật ngọt ngào', cat: 'cat_musician', aura: 'aura_music', reply: 'Từng giai điệu ngân lên đều mang tên Non Non - cô bé Hamster xinh đẹp nhất trong tim Mèo Ú!' },
+                    { label: '🎸 Đàn một bản tình ca 20/10 thật ngọt ngào', cat: 'cat_musician', aura: 'aura_music', reply: 'Từng giai điệu ngân lên đều mang tên Non Non, cô bé Hamster xinh đẹp nhất trong tim Mèo Ú!' },
                     { label: '👑 Trao Vương Miện & Phong Danh Hiệu Nữ Hoàng', cat: 'cat_king', headwear: 'crown_queen', reply: 'Mèo Ú xin trao vương miện vàng lấp lánh cho Nóc Nhà Quyền Lực & Đáng Yêu Nhất!' }
                 ]
             },
@@ -2479,7 +2479,7 @@ window.onload=function(){
  if(!boutiqueSave.equipped){try{const old=JSON.parse(localStorage.getItem('non-non-gift-v2')||'null');if(old&&typeof old==='object'){boutiqueSave.equipped=old.equipped;boutiqueSave.letter=old.letter;}}catch(e){}}
  const initial=boutiqueSave.equipped||boutiqueCombos[0];
  for(const cat of Object.keys(WARDROBE_DATA))if((initial[cat]==='none'&&!['outfit','bg','cat','face'].includes(cat))||WARDROBE_DATA[cat].some(i=>i.id===initial[cat]))state.equipped[cat]=initial[cat];
- if(typeof boutiqueSave.letter==='string'){boutiqueSave.letter=boutiqueSave.letter.replaceAll('đầm dạ hội lộng lẫy','áo các dì các mẹ');document.getElementById('loveLetterBody').textContent=boutiqueSave.letter;}
+ if(typeof boutiqueSave.letter==='string'){boutiqueSave.letter=boutiqueSave.letter.replaceAll('đầm dạ hội lộng lẫy','áo các dì các mẹ').replaceAll('Gửi Non Non - cô bé Hamster','Gửi Non Non, cô bé Hamster');document.getElementById('loveLetterBody').textContent=boutiqueSave.letter;}
  if(typeof boutiqueSave.sound==='boolean')audio.enabled=boutiqueSave.sound;
  mainLoad();
  persistBoutique();
